@@ -7,26 +7,29 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import theme from './themes/theme';
+import Wrapper from './components/Wrapper';
 
 const App: React.FC = () => {
     return (
         <ThemeProvider theme={theme}>
-            <Box
-                sx={{
-                    backgroundColor: 'background.default',
-                    display: 'flex',
-                    flexDirection: 'column',
-                }}>
-                <CssBaseline />
-                <Router>
-                    <Header />
-                    <Routes>
-                        <Route path="/" element={(<Home />)} />
-                        <Route path="/about" element={(<About />)} />
-                    </Routes>
-                    <Footer />
-                </Router>
-            </Box>
+            <Router>
+                <Wrapper>
+                    <Box
+                        sx={{
+                            backgroundColor: 'background.default',
+                            display: 'flex',
+                            flexDirection: 'column',
+                        }}>
+                        <CssBaseline />
+                        <Header />
+                        <Routes>
+                            <Route path="/" element={(<Home />)} />
+                            <Route path="/about" element={(<About />)} />
+                        </Routes>
+                        <Footer />
+                    </Box>
+                </Wrapper>
+            </Router>
         </ThemeProvider>
     );
 };

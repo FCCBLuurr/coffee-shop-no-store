@@ -1,0 +1,27 @@
+{
+    "short_name": "CoffeeShopTemplate",
+    "name": "Coffee Shop Template (No Store)",
+    "description": "A customizable website template for local companies",
+    "icons": [
+        {
+            "src": "icon/lowres.webp",
+            "sizes": "48x48",
+            "type": "image/webp"
+        },
+        {
+            "src": "icon/lowres.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "icon/hd_hi",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6"
+}

@@ -4,7 +4,6 @@ import { styled } from '@mui/material/styles';
 import { Link, LinkProps } from 'react-router-dom';
 import NavbarTheme from '../themes/navbarTheme';
 
-//CustomButtonTheme uses themes from parent component. Modify the theme in parent component's theme file
 const CustomButtonTheme = styled(Button)<ButtonProps>(({ theme }) => ({
     backgroundColor: NavbarTheme.palette.secondary.main,
     color: NavbarTheme.palette.text.primary,
@@ -15,6 +14,16 @@ const CustomButtonTheme = styled(Button)<ButtonProps>(({ theme }) => ({
     borderRadius: '8px',
     fontSize: '1.2rem',
     marginRight: '15px',
+    [theme.breakpoints.down('sm')]: {
+        padding: '6px 12px', // Adjust padding for small screens
+        fontSize: '0.75rem', // Adjust font size for small screens
+        marginRight: '5px',
+    },
+    [theme.breakpoints.up('md')]: {
+        padding: '14px 30px',
+        fontSize: '1.2rem',
+        marginRight: '15px',
+    },
 }));
 
 const CustomButton: React.FC<ButtonProps & LinkProps> = (props) => {
